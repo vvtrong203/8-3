@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Gửi lời yêu thương đến Mẹ!" />
+  <meta name="author" content="DONGNGO" />
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./assets/fonts/themify-icons.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/responsive.css" />
+  <title>::.. Chúc mừng ngày 8/3 Mẹ yêu ^^ ..::</title>
+  <style>
+    .image-container {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 20px 0;
+      width: 100%;
+    }
+    .image-container img {
+      max-width: 30%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .music-control {
+      margin: 20px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .answer-question {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .btn--yes {
+      padding: 10px 20px;
+      background-color: #ff5ca4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn--yes:hover {
+      background-color: #ff3b8e;
+      transform: scale(1.05);
+    }
+  </style>
+
+</head>
+<body>
+<div class="container">
+  <div id="preloader">
+    <div class="spinner">
+      <div class="dashed-loading"></div>
+    </div>
+  </div>
+
+  <canvas id="pinkboard"></canvas>
+
+  <header class="header"></header>
+
+  <div style="align-items: center" class="content">
+    <div class="music-control">
+      <audio controls autoplay loop class="music">
+        <source src="./assets/musics/V1.wav" type="audio/wav" />
+      </audio>
+    </div>
+
+    <div  style="align-items: center" class="answer-question">
+      <button  style="margin-left: 230px" class="btn btn--yes">Xem lời nhắn</button>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__body">
+      <div class="message-modal">
+        <div class="image-container">
+          <img src="assets/image/z6387852626191_6afb8e3b2f18567704ebdf8bcc8fec31.jpg" alt="photo with mom" />
+          <img src="assets/image/z6387852627282_596e5a950cf779510fa0e73992a99893.jpg" alt="photo with mom" />
+        </div>
+        <div class="heading-name">
+          <h2 class="name"></h2>
+        </div>
+        <div class="heading-msg">
+          <p class="message"></p>
+        </div>
+        <div class="footer-modal">
+          <button class="btn btn-close">
+            <i class="btn-icon ti-close"></i>
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+        type="text/javascript"
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+></script>
+<script src="./CONFIG.js"></script>
+<script src="./assets/js/setting.js"></script>
+<script src="./assets/js/RequestAnimationFrame.js"></script>
+<script src="./assets/js/heartParticle.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
