@@ -89,12 +89,26 @@
 
   <div style="align-items: center" class="content">
     <div class="music-control">
-      <audio controls autoplay loop class="music">
+      <audio id="musicPlayer" loop class="music">
         <source src="./assets/musics/tet.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-
+      <button id="playMusic">🎵 Play Music</button>
     </div>
+    <script>
+      audio.play();
+      document.getElementById("playMusic").addEventListener("click", function() {
+        const audio = document.getElementById("musicPlayer");
+        if (audio.paused) {
+          audio.play();
+          this.textContent = "⏸ Pause Music";
+        } else {
+          audio.pause();
+          this.textContent = "🎵 Play Music";
+        }
+      });
+    </script>
+
 
     <div style="align-items: center" class="answer-question">
       <button class="btn btn--yes">Xem lời nhắn</button>
